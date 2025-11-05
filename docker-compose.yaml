@@ -15,7 +15,7 @@ services:
     image: postgres
     restart: always
     volumes:
-      - database-data:/var/lib/postgresql/data/
+      - database-data:/var/lib/postgresql/
     env_file: .env
     networks:
       - stack
@@ -57,4 +57,5 @@ services:
       - DATABASE_DIRECT_URL=${DATABASE_URL}
     depends_on:
       - database
+
 
