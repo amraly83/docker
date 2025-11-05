@@ -37,7 +37,7 @@ services:
     networks:
       - stack
     ports:
-      - 3000:3000
+      - 8765:3000
     env_file: .env
     environment:
       - NEXT_PUBLIC_WEBAPP_URL=${NEXT_PUBLIC_WEBAPP_URL}
@@ -57,3 +57,4 @@ services:
       - DATABASE_DIRECT_URL=${DATABASE_URL}
     depends_on:
       - database
+
